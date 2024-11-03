@@ -6,23 +6,11 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:47 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 20:35:57 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:08:59 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-void delete (void *c)
-{
-	c = (void *)NULL;
-}
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -32,10 +20,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	(*lst)->next = NULL;
 	free(*lst);
 	(*lst) = NULL;
-}
-void	*add(void *ptr)
-{
-	ptr = (void *)6;
 }
 int	safe_malloc(t_list **ptr, void (*del)(void *))
 {
@@ -47,7 +31,8 @@ int	safe_malloc(t_list **ptr, void (*del)(void *))
 	}
 	return (0);
 }
-t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *),
+		void (*del)(void *))
 {
 	t_list	*prev;
 	t_list	*save_root;
@@ -77,20 +62,7 @@ t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *), void (*del)(voi
 }
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*newroot;
-	newroot = create(newroot, lst,f, del);
+	t_list *newroot;
+	newroot = create(newroot, lst, f, del);
 	return (newroot);
-}
-
-int	main(void)
-{
-	t_list *root;
-	t_list *new;
-
-	root = malloc(sizeof(t_list));
-	root->next = malloc(sizeof(t_list));
-	root->next->next = malloc(sizeof(t_list));
-	root->next->next->next = malloc(sizeof(t_list));
-	root->next->next->next->next = NULL;
-	new = ft_lstmap(root, &add, &delete);
 }

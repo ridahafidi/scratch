@@ -6,13 +6,13 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:01 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 14:14:17 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:04:46 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
 	if (!ft_tolower(c) || !ft_toupper(c))
 		return (1);

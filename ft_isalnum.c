@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:29:58 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/10/27 20:29:59 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:04:31 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if(!ft_isalpha(c) && !ft_isdigit(c))
+	if (!ft_isalpha(c) && !ft_isdigit(c))
 		return (1);
 	else
-		return(0);
+		return (0);
 }
