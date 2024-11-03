@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:29:44 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:04:12 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:27:25 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+
