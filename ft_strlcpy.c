@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:37 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:29:30 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:36:07 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	const char *temp_src;
-	char *temp_dst;
-	size_t len;
+	const char	*temp_src;
+	char		*temp_dst;
+	size_t		len;
 
 	temp_src = src;
 	temp_dst = dst;

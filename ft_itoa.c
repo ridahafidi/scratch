@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:32:07 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:00 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:31:18 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	countlen(int n)
 	}
 	return (len);
 }
+
 void	fill(char *str, int n, int len, int negative)
 {
 	str[len] = '\0';
@@ -69,9 +70,9 @@ void	fill(char *str, int n, int len, int negative)
 
 char	*ft_itoa(int n)
 {
-	int len;
-	int negative;
-	char *str;
+	int		len;
+	int		negative;
+	char	*str;
 
 	len = countlen(n);
 	negative = 0;

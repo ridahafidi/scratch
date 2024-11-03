@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:52 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:29:47 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:36:49 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void	fill(char *dst, char const *src, size_t len)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	int len;
-	char *str;
+	size_t	i;
+	size_t	j;
+	int		len;
+	char	*str;
 
 	if (!s1 || !set)
 		return (ft_strdup(""));

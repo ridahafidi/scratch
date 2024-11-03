@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:35 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:29:27 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:35:45 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char *temp_dst;
-	const char *temp_src;
-	size_t len;
+	char		*temp_dst;
+	const char	*temp_src;
+	size_t		len;
 
 	len = strlen(dst);
 	if (*src == '\0')

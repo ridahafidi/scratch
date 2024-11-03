@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:25:42 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:56 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:34:19 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	foo(unsigned char *dst, const unsigned char *src, size_t len)
 		len--;
 	}
 }
+
 void	boo(unsigned char *dst, const unsigned char *src, size_t len)
 {
 	while (len > 0)
@@ -32,10 +33,11 @@ void	boo(unsigned char *dst, const unsigned char *src, size_t len)
 		len--;
 	}
 }
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	const unsigned char *temp_src;
-	unsigned char *temp_dst;
+	const unsigned char	*temp_src;
+	unsigned char		*temp_dst;
 
 	temp_src = (const unsigned char *)src;
 	temp_dst = (unsigned char *)dst;

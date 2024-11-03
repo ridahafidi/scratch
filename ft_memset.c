@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:26:29 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:59 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:34:45 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *temp_b;
+	unsigned char	*temp_b;
 
 	temp_b = (unsigned char *)b;
 	while (len > 0)

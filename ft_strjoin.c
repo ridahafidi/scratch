@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:31 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:29:25 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:35:31 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	fill(char *dst, const char *src, size_t length)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t len;
-	char *str;
+	size_t	len;
+	char	*str;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = malloc(sizeof(char) * (len + 1));

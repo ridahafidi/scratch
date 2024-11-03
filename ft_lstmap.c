@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:47 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:30 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:33:07 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	free(*lst);
 	(*lst) = NULL;
 }
+
 int	safe_malloc(t_list **ptr, void (*del)(void *))
 {
 	*ptr = malloc(sizeof(t_list));
@@ -31,6 +32,7 @@ int	safe_malloc(t_list **ptr, void (*del)(void *))
 	}
 	return (0);
 }
+
 t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *),
 		void (*del)(void *))
 {
@@ -60,9 +62,11 @@ t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *),
 	prev->next = NULL;
 	return (save_root);
 }
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *newroot;
+	t_list	*newroot;
+
 	newroot = create(newroot, lst, f, del);
 	return (newroot);
 }

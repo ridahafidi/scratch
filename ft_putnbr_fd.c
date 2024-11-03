@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 18:59:41 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:29:08 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/03 21:34:57 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
