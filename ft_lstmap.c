@@ -6,21 +6,11 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:47 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:33:07 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/04 11:41:10 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	if ((*lst)->next)
-		ft_lstclear(&((*lst)->next), &delete);
-	(del)((*lst)->content);
-	(*lst)->next = NULL;
-	free(*lst);
-	(*lst) = NULL;
-}
 
 int	safe_malloc(t_list **ptr, void (*del)(void *))
 {
