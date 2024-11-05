@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:25:42 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/05 11:27:11 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 12:11:01 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	temp_src = (const unsigned char *)src;
 	temp_dst = (unsigned char *)dst;
-	if (src < dst)
+	if (src > dst)
 		foo(temp_dst, temp_src, len);
-	else
-		boo(temp_dst + len, temp_src + len, len);
+	else if (src < dst)
+		boo(temp_dst + len - 1, temp_src + len - 1, len);
 	return (dst);
 }
