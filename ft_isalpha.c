@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:01 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:04:46 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 11:43:46 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if (!ft_tolower(c) || !ft_toupper(c))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

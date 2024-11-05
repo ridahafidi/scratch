@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:20:18 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/05 11:20:31 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 11:29:50 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	**ft_split(const char *s, char c)
 {
 	size_t	words;
 	char	**str;
-	size_t		i;
+	size_t	i;
 
 	if (s == NULL)
 		return (NULL);
