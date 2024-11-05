@@ -6,31 +6,37 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:35 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:35:45 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 14:25:18 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char		*temp_dst;
-	const char	*temp_src;
-	size_t		len;
+	size_t	dst_len;
+	size_t	src_len;
 
-	len = strlen(dst);
-	if (*src == '\0')
-		return (len);
-	temp_dst = dst + len;
-	temp_src = src;
-	while ((size - len - 1) > 0)
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (size <= dst_len)
+		return (src_len + size);
+	dst = dst + dst_len;
+	size = size - dst_len - 1;
+	while (size > 0 && *src)
 	{
-		*temp_dst = *temp_src;
-		temp_dst++;
-		temp_src++;
+		*dst = *src;
+		dst++;
+		src++;
 		size--;
 	}
-	*temp_dst = '\0';
-	len = strlen(dst);
-	return (len);
+	*dst = '\0';
+	return (src_len + dst_len);
 }
+// int	main(void)
+// {
+// 	char dest[11] = 'a';
+// 	char src[] = "aslkdh";
+// 	ft_strlcat(dest, src, 3);
+// }
