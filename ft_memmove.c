@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:25:42 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:34:19 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 11:27:11 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	foo(unsigned char *dst, const unsigned char *src, size_t len)
 {
 	while (len > 0)
 	{
-		*temp_dst = *temp_src;
-		temp_dst++;
-		temp_src++;
+		*dst = *src;
+		dst++;
+		src++;
 		len--;
 	}
 }
@@ -27,9 +27,9 @@ void	boo(unsigned char *dst, const unsigned char *src, size_t len)
 {
 	while (len > 0)
 	{
-		*temp_dst = *temp_src;
-		temp_dst--;
-		temp_src--;
+		*dst = *src;
+		dst--;
+		src--;
 		len--;
 	}
 }
