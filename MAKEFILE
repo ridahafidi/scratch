@@ -18,5 +18,8 @@ all:${NAME}
 ${NAME}:${OBJS}
 	ar rcs $@ $^
 
-Clean:
+clean:
 	rm -f *.o
+
+fclean:clean
+	rm -f ${NAME}
