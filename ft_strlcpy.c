@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:37 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:36:07 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/05 13:36:30 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,31 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	const char	*temp_src;
-	char		*temp_dst;
-	size_t		len;
+	size_t	len;
 
-	temp_src = src;
-	temp_dst = dst;
-	len = strlen(src);
-	while ((dstsize - 1) > 0)
-	{
-		*temp_dst = *temp_src;
-		temp_src++;
-		temp_dst++;
-		dstsize--;
-	}
+	len = ft_strlen(src);
+	if (dstsize == 0)
+		return (len);
 	if (dstsize > 0)
 	{
-		*temp_dst = '\0';
+		while (dstsize > 1 && *src)
+		{
+			*dst = *src;
+			src++;
+			dst++;
+			dstsize--;
+		}
+		*dst = '\0';
 	}
 	return (len);
 }
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char	dst[15];
+
+// 	printf("%zu\n", ft_strlcpy(dst, "", 15));
+// 	printf("%zu", strlcpy(dst, "", 15));
+// }
