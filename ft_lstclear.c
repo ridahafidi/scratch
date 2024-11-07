@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:33:01 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:31:48 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/07 11:58:37 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if ((*lst)->next)
+	if (!(*lst))
+		return;
+	if ((*lst) && (*lst)->next)
 		ft_lstclear(&((*lst)->next), del);
 	(del)((*lst)->content);
 	(*lst)->next = NULL;
