@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:47 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/04 11:41:10 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/07 09:35:24 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ t_list	*create(t_list *newroot, t_list *lst, void *(*f)(void *),
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newroot;
-
+	
+	newroot = NULL;
 	newroot = create(newroot, lst, f, del);
 	return (newroot);
 }

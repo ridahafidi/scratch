@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:01:56 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:23 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/07 10:01:22 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
+	if (!lst)
+		return (NULL);
+	while (lst && lst->next)
 		lst = lst->next;
 	return (lst);
 }

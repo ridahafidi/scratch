@@ -23,3 +23,10 @@ clean:
 
 fclean:clean
 	rm -f ${NAME}
+
+re:fclean all
+
+bonus:${BOBJS}
+	ar rcs ${NAME} $^
+
+.PHONY : clean fclean bonus all

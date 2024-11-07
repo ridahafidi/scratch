@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:51:24 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:06:42 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/07 09:57:38 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst->next)
+	while (lst)
 	{
 		(*f)(lst->content);
 		lst = lst->next;

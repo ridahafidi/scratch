@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:56:06 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:28:04 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/07 10:12:24 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while ((*lst)->next)
-		(*lst) = (*lst)->next;
-	(*lst)->next = new;
-	new->next = NULL;
+	t_list	*tmp_lst;
+
+	tmp_lst = (*lst);
+	if (!(*lst))
+		*lst = new;
+	else
+	{
+		tmp_lst = ft_lstlast(tmp_lst);
+		tmp_lst->next = new;
+	}
 }
