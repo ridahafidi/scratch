@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:29:54 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/09 13:29:45 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 19:29:32 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = malloc(sum);
 	if (ptr == NULL)
 		return (NULL);
-	ft_memset(ptr, '\0', sum);
+	ft_bzero(ptr, sum);
 	return (ptr);
 }
