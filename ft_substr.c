@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:54 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/06 12:55:09 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:27:19 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	if (start >= ft_strlen(s))
-		return(ft_strdup(""));
+		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	str = malloc(sizeof(char) * (len + 1));
@@ -26,3 +26,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
+no

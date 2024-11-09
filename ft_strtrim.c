@@ -6,13 +6,13 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:30:52 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:36:49 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:29:39 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isset(char s1, char const *set)
+static int	isset(char s1, char const *set)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ int	isset(char s1, char const *set)
 	return (0);
 }
 
-void	fill(char *dst, char const *src, size_t len)
+static void	fill(char *dst, char const *src, size_t len)
 {
 	while (len)
 	{

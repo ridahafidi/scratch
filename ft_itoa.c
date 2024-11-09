@@ -6,13 +6,13 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:32:07 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:31:18 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:29:18 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countlen(int n)
+static int	countlen(int n)
 {
 	int	len;
 
@@ -40,7 +40,7 @@ int	countlen(int n)
 	return (len);
 }
 
-void	fill(char *str, int n, int len, int negative)
+static void	fill(char *str, int n, int len, int negative)
 {
 	str[len] = '\0';
 	len--;

@@ -6,13 +6,13 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:20:18 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/05 11:29:50 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:28:56 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	countwords(const char *s, char c)
+static size_t	countwords(const char *s, char c)
 {
 	int		inside_word;
 	size_t	found;
@@ -36,7 +36,7 @@ size_t	countwords(const char *s, char c)
 	return (found);
 }
 
-int	safemalloc(char **str, int i, size_t len)
+static int	safemalloc(char **str, int i, size_t len)
 {
 	int	j;
 
@@ -54,7 +54,7 @@ int	safemalloc(char **str, int i, size_t len)
 	return (0);
 }
 
-void	copy(char *dst, const char *src, size_t len)
+static void	copy(char *dst, const char *src, size_t len)
 {
 	while (len)
 	{
@@ -66,7 +66,7 @@ void	copy(char *dst, const char *src, size_t len)
 	*dst = '\0';
 }
 
-int	fill(char **str, const char *s, char c)
+static int	fill(char **str, const char *s, char c)
 {
 	int		i;
 	size_t	len;
