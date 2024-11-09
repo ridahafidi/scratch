@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:25:51 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/04 10:23:27 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:28:58 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	temp_dst = (unsigned char *)dst;
 	temp_src = (const unsigned char *)src;
+	if (!dst && !src)
+		return (NULL);
 	while (n > 0)
 	{
 		*temp_dst = *temp_src;

@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:32:07 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/09 12:29:18 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:25:53 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		negative = 1;
 	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	fill(str, n, len, negative);
 	return (str);
 }
