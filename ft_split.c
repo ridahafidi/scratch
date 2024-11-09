@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:20:18 by rhafidi           #+#    #+#             */
-/*   Updated: 2024/11/09 12:28:56 by rhafidi          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:58:07 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static int	fill(char **str, const char *s, char c)
 			s++;
 			len++;
 		}
-		if (len)
+		if (len > 0)
 		{
 			if (!safemalloc(str, i, len))
 				copy(str[i], s - len, len);
@@ -110,10 +110,8 @@ char	**ft_split(const char *s, char c)
 	str[words] = NULL;
 	if (!fill(str, s, c))
 		return (str);
-	else
-	{
-		while (i <= words)
-			free(str[i++]);
-		return (NULL);
-	}
+	while (i <= words)
+		free(str[i++]);
+	free(str);
+	return (NULL);
 }
